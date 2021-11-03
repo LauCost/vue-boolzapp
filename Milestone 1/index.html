@@ -24,26 +24,66 @@
     <main id="data">
 
         <div class="container">
-            <div class="row test">
-                <div class="col-4 test2">
+            <div class="row cont_struttura">
+
+                <!-- Side left -->
+                <div class="col-4 side">
 
                     <div class="row">
+
+                        <!-- Profilo utente -->
                         <div class="col-12 profilo">
+                            <div class="row h_100">
 
+                                <div class=" col-6 img_nome">
+
+                                    <img src="./img/avatar_io.jpg" alt="">
+                                    <p>
+                                        Nomu Utente
+                                    </p>
+
+                                </div>
+                                <div class="col-6 utility">
+                                    <i class="fas fa-circle-notch"></i>
+                                    <i class="fas fa-comment-alt"></i>
+                                    <i class="fas fa-ellipsis-v"></i>
+                                </div>
+                            </div>
                         </div>
+
+                        <!-- Disattiva notifiche -->
                         <div class="col-12 disattiva_notifiche">
-
+                            <span class="cont_ball">
+                                <i class="fas fa-bell-slash"></i>
+                            </span>
+                            <span class="txt_notifiche">
+                                Ricevi notifiche di nuovi messaggi <br>
+                                <span class="txt_attiva_notifiche">
+                                    Attiva notifiche desktop
+                                </span>
+                            </span>
                         </div>
+
+                        <!-- Search bar -->
                         <div class="col-12 cont_search">
                             <div class="search">
 
                             </div>
                         </div>
-                        <div class="col-12 amici">
 
+                        <!-- Amici -->
+                        <div class="col-12 amici">
+                            <div v-for="contact in contacts" class="amico">
+                                <img :src="contact.avatar" alt="">
+                                <p class="name">
+                                    {{contact.name}}
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
+
+                <!-- Side right -->
                 <div class="col-8">
 
                 </div>

@@ -4,6 +4,9 @@
     box-sizing: border-box;
 }
 
+.h_100{
+    height: 100%;
+}
 
 header{
     width: 100%;
@@ -19,7 +22,7 @@ main{
     height: calc(100vh - 100px);
 }
 
-.test{
+.cont_struttura{
     width: 70%;
     height: 700px;
     background-color: red;
@@ -29,20 +32,85 @@ main{
     transform: translate(-50%, -11%);
 }
 
-.test2{
+.side{
     height: 100%;
     background-color: chartreuse;
 }
 
+
+
+/* Contenuto profilo utente */
 .profilo{
     height: 78px;
     background-color: #EAEAEA;
 }
 
+.img_nome{
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+img{
+    width: 60px;
+    border-radius: 50%;
+}
+
+p{
+    margin-bottom: 0px!important;
+}
+
+.utility{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+i{
+    font-size: 30px;
+    margin: 0 15px;
+    color: #B1B1B1;
+}
+/* /Contenuto profilo utente */
+
+
+
+/* Contenuto Notifiche */
 .disattiva_notifiche{
     height: 85px;
     background-color: #8EDAFC;
+    display: flex;
+    align-items: center;
 }
+.cont_ball{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 10px;
+}
+
+.cont_ball > i {
+    color: #8EDAFC;
+}
+
+.txt_notifiche{
+    font-weight: bold;
+}
+
+.txt_attiva_notifiche{
+    font-size: 13px;
+    text-decoration: underline;
+    color: #577485;
+    font-weight: 400;
+
+}
+
+/* Contenuto Notifiche */
+
 
 .cont_search{
     padding: 10px;
@@ -55,8 +123,22 @@ main{
     background-color: cornsilk;
 }
 
+/* Contenuto amici */
 .amici{
-    height: calc(100% - 233px);
+    height: 467px;
     background-color: #FFFFFF;
+    overflow: auto;
+    overflow-x: hidden;
 }
+
+.amico{
+    padding: 15px 0;
+    border-bottom: 1px solid #F5F5F5;
+    display: flex;
+}
+.name{
+    margin-left: 15px;
+    font-weight: 500;
+}
+/* Contenuto amici */
 /* Contenuto Main */
