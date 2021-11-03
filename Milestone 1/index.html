@@ -68,7 +68,7 @@
                         <div class="col-12 cont_search">
                             <div class="search">
                                 <i class="fas fa-search"></i>
-                                <input type="text" v-model="newTasks" placeholder="Cerca o inizia una nuova chat">
+                                <input type="text" placeholder="Cerca o inizia una nuova chat">
                             </div>
                         </div>
 
@@ -86,6 +86,45 @@
 
                 <!-- Side right -->
                 <div class="col-8">
+
+                    <div class="row">
+
+                        <!-- Info amico -->
+                        <div class="col-12 profilo">
+                            <div class="row h_100">
+
+                                <div class=" col-6 img_nome">
+
+                                    <img :src="contacts[counter].avatar" alt="">
+                                    <p class="nome_accesso">
+                                        {{contacts[counter].name}} <br>
+
+                                        <span class="ultimo_accesso">
+                                            Ultimo accesso oggi alle
+                                        </span>
+                                    </p>
+
+                                </div>
+                                <div class="col-6 utility">
+                                    <i class="fas fa-search"></i>
+                                    <i class="fas fa-paperclip"></i>
+                                    <i class="fas fa-ellipsis-v"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 cont_messaggi">
+
+                        </div>
+
+                        <div class="col-12 cont_invio">
+                            <i class="far fa-smile"></i>
+
+                            <input type="text" placeholder="Scrivi un messaggio">
+
+                            <i class="fas fa-microphone"></i>
+                        </div>
+                    </div>
 
                 </div>
             </div>

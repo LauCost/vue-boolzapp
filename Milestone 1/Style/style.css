@@ -15,6 +15,19 @@ header{
 }
 
 
+/* :Hover */
+.amico:hover{
+    background-color: #EAEAEA;
+    
+}
+
+.amico:hover, .img_nome:hover, .fas:hover, .disattiva_notifiche:hover{
+    cursor: pointer;
+}
+/* /:Hover */
+
+
+
 
 /* Contenuto Main */
 main{
@@ -25,7 +38,6 @@ main{
 .cont_struttura{
     width: 70%;
     height: 700px;
-    background-color: red;
     position: fixed;
     top: 10%;
     left: 50%;
@@ -34,7 +46,6 @@ main{
 
 .side{
     height: 100%;
-    background-color: chartreuse;
 }
 
 
@@ -43,6 +54,7 @@ main{
 .profilo{
     height: 78px;
     background-color: #EAEAEA;
+    border-right: 1px solid #D6D6D6;
 }
 
 .img_nome{
@@ -161,4 +173,32 @@ input{
     font-weight: 500;
 }
 /* Contenuto amici */
+
+
+
+/* Side bar right */
+.nome_accesso{
+    margin-left: 15px;
+}
+
+.ultimo_accesso{
+    font-size: 13px;
+    color: #7F7376;
+}
+
+.cont_messaggi{
+    height: 540px;
+    overflow: auto;
+    overflow-x: hidden;
+    background-image: url(../img/mine.jpg);
+    background-size: contain;
+
+}
+
+.cont_invio{
+    background-color: #F3EEEA;
+    height: 83px;
+    display: flex;
+    align-items: center;
+}
 /* Contenuto Main */
