@@ -112,6 +112,9 @@ i{
 /* Contenuto Notifiche */
 
 
+
+
+/* Contenuto Search */
 .cont_search{
     padding: 10px;
     background-color: #FAFAFA;
@@ -120,8 +123,25 @@ i{
 .search{
     margin: auto;
     height: 50px;
-    background-color: cornsilk;
+    background-color: #FFFFFF;
+    display: flex;
+    border-radius: 10px;
 }
+
+.search > i{
+    margin: 10px;
+}
+
+input{
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    margin-left: 10px!important;
+    padding: 10px;
+}
+/* Contenuto Search */
+
+
 
 /* Contenuto amici */
 .amici{
