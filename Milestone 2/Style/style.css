@@ -1,0 +1,204 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.h_100{
+    height: 100%;
+}
+
+header{
+    width: 100%;
+    height: 100px;
+    background-color: #009688;
+}
+
+
+/* :Hover */
+.amico:hover{
+    background-color: #EAEAEA;
+    
+}
+
+.amico:hover, .img_nome:hover, .fas:hover, .disattiva_notifiche:hover{
+    cursor: pointer;
+}
+/* /:Hover */
+
+
+
+
+/* Contenuto Main */
+main{
+    background-color: #DBDBD4;
+    height: calc(100vh - 100px);
+}
+
+.cont_struttura{
+    width: 70%;
+    height: 700px;
+    position: fixed;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -11%);
+}
+
+.side{
+    height: 100%;
+}
+
+
+
+/* Contenuto profilo utente */
+.profilo{
+    height: 78px;
+    background-color: #EAEAEA;
+    border-right: 1px solid #D6D6D6;
+}
+
+.img_nome{
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+img{
+    width: 60px;
+    border-radius: 50%;
+}
+
+p{
+    margin-bottom: 0px!important;
+}
+
+.utility{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+i{
+    font-size: 30px;
+    margin: 0 15px;
+    color: #B1B1B1;
+}
+/* /Contenuto profilo utente */
+
+
+
+/* Contenuto Notifiche */
+.disattiva_notifiche{
+    height: 85px;
+    background-color: #8EDAFC;
+    display: flex;
+    align-items: center;
+}
+.cont_ball{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 10px;
+}
+
+.cont_ball > i {
+    color: #8EDAFC;
+}
+
+.txt_notifiche{
+    font-weight: bold;
+}
+
+.txt_attiva_notifiche{
+    font-size: 13px;
+    text-decoration: underline;
+    color: #577485;
+    font-weight: 400;
+
+}
+
+/* Contenuto Notifiche */
+
+
+
+
+/* Contenuto Search */
+.cont_search{
+    padding: 10px;
+    background-color: #FAFAFA;
+}
+
+.search{
+    margin: auto;
+    height: 50px;
+    background-color: #FFFFFF;
+    display: flex;
+    border-radius: 10px;
+}
+
+.search > i{
+    margin: 10px;
+}
+
+input{
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    margin-left: 10px!important;
+    padding: 10px;
+}
+/* Contenuto Search */
+
+
+
+/* Contenuto amici */
+.amici{
+    height: 467px;
+    background-color: #FFFFFF;
+    overflow: auto;
+    overflow-x: hidden;
+}
+
+.amico{
+    padding: 15px 0;
+    border-bottom: 1px solid #F5F5F5;
+    display: flex;
+}
+.name{
+    margin-left: 15px;
+    font-weight: 500;
+}
+/* Contenuto amici */
+
+
+
+/* Side bar right */
+.nome_accesso{
+    margin-left: 15px;
+}
+
+.ultimo_accesso{
+    font-size: 13px;
+    color: #7F7376;
+}
+
+.cont_messaggi{
+    height: 540px;
+    overflow: auto;
+    overflow-x: hidden;
+    background-image: url(../img/mine.jpg);
+    background-size: contain;
+
+}
+
+.cont_invio{
+    background-color: #F3EEEA;
+    height: 83px;
+    display: flex;
+    align-items: center;
+}
+/* Contenuto Main */
