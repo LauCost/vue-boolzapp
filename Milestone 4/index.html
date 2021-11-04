@@ -12,7 +12,7 @@
         integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
-    <title>Milestone 3</title>
+    <title>Milestone 4</title>
 </head>
 
 <body>
@@ -68,13 +68,15 @@
                         <div class="col-12 cont_search">
                             <div class="search">
                                 <i class="fas fa-search"></i>
-                                <input type="text" placeholder="Cerca o inizia una nuova chat">
+                                <input type="text" placeholder="Cerca o inizia una nuova chat" v-model="searchBar"
+                                    @keyup="cerca">
                             </div>
                         </div>
 
                         <!-- Amici -->
                         <div class="col-12 amici">
-                            <div v-for="(contact, i) in contacts" class="amico" @click="selezionaChat(i)">
+                            <div v-for="(contact, i) in contacts" class="amico" @click="selezionaChat(i)"
+                                v-if="contact.visible">
                                 <img :src="contact.avatar" alt="">
                                 <p class="name">
                                     {{contact.name}}

@@ -127,6 +127,8 @@ const app = new Vue({
         counter: 0,
 
         messaggioNuovo: '',
+
+        searchBar: '',
     },
 
     methods: {
@@ -177,6 +179,21 @@ const app = new Vue({
                 });
             }, 1000)
 
+
+        },
+
+
+        cerca() {
+
+            /* console.log(this.searchBar); */
+
+            this.contacts.forEach(contatto => {
+                if (contatto.name.toLowerCase().includes(this.searchBar.toLowerCase())) {
+                    contatto.visible = true
+                } else {
+                    contatto.visible = false
+                }
+            });
 
         },
 
