@@ -8,6 +8,8 @@
     height: 100%;
 }
 
+
+
 header{
     width: 100%;
     height: 100px;
@@ -186,6 +188,10 @@ input{
     color: #7F7376;
 }
 
+
+
+
+/* Contenuto della chat */
 .cont_messaggi{
     height: 540px;
     overflow: auto;
@@ -194,6 +200,47 @@ input{
     background-size: contain;
 
 }
+
+.inviato{
+    width: 320px;
+    padding: 15px;
+    border-radius: 15px;
+    margin: 15px!important;
+    color: #000000;
+    background-color: #D5F9BA;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.ricevuto{
+    background-color: #FFFFFF;
+    color: #000000;
+    padding: 15px;
+    width: 300px;
+    border-radius: 15px;
+    margin: 15px!important;
+    display: flex;
+    flex-direction: column;
+}
+
+.data{
+    font-size: 12px;
+    text-align: end;
+}
+
+.disp_inviato{
+    display: flex;
+    justify-content: end;
+}
+
+.disp_ricevuto{
+    display: flex;
+    justify-content: start;
+}
+/* Contenuto della chat */
+
+
 
 .cont_invio{
     background-color: #F3EEEA;

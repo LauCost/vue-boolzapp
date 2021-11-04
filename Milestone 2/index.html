@@ -114,14 +114,18 @@
                         </div>
 
                         <div class="col-12 cont_messaggi">
-                            <div v-for="messaggio in contacts[counter].messages">
-                                <p>
-                                    {{messaggio.text}}
+                            <div v-for="messaggio in contacts[counter].messages"
+                                :class=" messaggio.status == 'sent' ? 'disp_inviato' : 'disp_ricevuto' ">
+                                <p :class=" messaggio.status == 'sent' ? 'inviato' : 'ricevuto' ">
+                                    {{messaggio.text}} <br>
+                                    <span class="data">
+                                        {{messaggio.date}}
+                                    </span>
                                 </p>
                             </div>
                         </div>
 
-                        <div class="col-12 cont_invio">
+                        <div class=" col-12 cont_invio">
                             <i class="far fa-smile"></i>
 
                             <input type="text" placeholder="Scrivi un messaggio">
