@@ -81,6 +81,9 @@
                                 <p class="name">
                                     {{contact.name}}
                                 </p>
+                                <p v-for="messaggio in contacts[i].messages">
+                                    {{messaggio.text}}
+                                </p>
                             </div>
                         </div>
                     </div>
