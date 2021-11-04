@@ -139,11 +139,18 @@ const app = new Vue({
 
         nuovoMessaggio() {
 
-            console.log(this.messaggioNuovo);
+            var today = new Date();
+
+            var date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
+
+            var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+
+            var dateTime = date + ' ' + time;
 
             if (this.messaggioNuovo != "") {
 
                 this.contacts[this.counter].messages.push({
+                    date: dateTime,
                     text: this.messaggioNuovo,
                     status: 'sent'
                 })
@@ -152,14 +159,26 @@ const app = new Vue({
 
             this.messaggioNuovo = "";
 
-            setInterval(() => {
-                this.contacts[this.counter].messages.push({
-                    text: 'Ok!',
-                    status: 'received'
-                })
 
-            }, 1000);
-        }
+
+            setTimeout(() => {
+                var today = new Date();
+
+                var date = today.getFullYear() + '/' + (today.getMonth() + 1) + '/' + today.getDate();
+
+                var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+
+                var dateTime2 = date + ' ' + time;
+
+                this.contacts[this.counter].messages.push({
+                    date: dateTime2,
+                    text: 'Ok!',
+                    status: 'received',
+                });
+            }, 1000)
+
+
+        },
 
     }
 })
