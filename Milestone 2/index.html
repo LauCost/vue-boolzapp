@@ -74,7 +74,7 @@
 
                         <!-- Amici -->
                         <div class="col-12 amici">
-                            <div v-for="contact in contacts" class="amico">
+                            <div v-for="(contact, i) in contacts" class="amico" @click="selezionaChat(i)">
                                 <img :src="contact.avatar" alt="">
                                 <p class="name">
                                     {{contact.name}}
@@ -114,7 +114,11 @@
                         </div>
 
                         <div class="col-12 cont_messaggi">
-
+                            <div v-for="messaggio in contacts[counter].messages">
+                                <p>
+                                    {{messaggio.text}}
+                                </p>
+                            </div>
                         </div>
 
                         <div class="col-12 cont_invio">

@@ -125,4 +125,13 @@ const app = new Vue({
 
         counter: 0,
     },
+
+    methods: {
+
+        selezionaChat(i) {
+            this.counter = i;
+
+            console.log(i);
+        }
+    }
 })
