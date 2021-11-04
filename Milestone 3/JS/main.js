@@ -152,6 +152,14 @@ const app = new Vue({
 
             this.messaggioNuovo = "";
 
+            setInterval(() => {
+                this.contacts[this.counter].messages.push({
+                    text: 'Ok!',
+                    status: 'received'
+                })
+
+            }, 1000);
         }
+
     }
 })
