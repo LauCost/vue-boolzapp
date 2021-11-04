@@ -23,7 +23,8 @@ const app = new Vue({
                         date: '10/01/2020 16:15:22',
                         text: 'Tutto fatto!',
                         status: 'received'
-                    }
+                    },
+
                 ],
             },
             {
@@ -124,6 +125,8 @@ const app = new Vue({
         ],
 
         counter: 0,
+
+        messaggioNuovo: '',
     },
 
     methods: {
@@ -132,6 +135,23 @@ const app = new Vue({
             this.counter = i;
 
             console.log(i);
+        },
+
+        nuovoMessaggio() {
+
+            console.log(this.messaggioNuovo);
+
+            if (this.messaggioNuovo != "") {
+
+                this.contacts[this.counter].messages.push({
+                    text: this.messaggioNuovo,
+                    status: 'sent'
+                })
+
+            }
+
+            this.messaggioNuovo = "";
+
         }
     }
 })

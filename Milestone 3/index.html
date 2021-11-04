@@ -12,7 +12,7 @@
         integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
-    <title>Milestone 2</title>
+    <title>Milestone 3</title>
 </head>
 
 <body>
@@ -113,6 +113,7 @@
                             </div>
                         </div>
 
+                        <!-- Chat -->
                         <div class="col-12 cont_messaggi">
                             <div v-for="messaggio in contacts[counter].messages"
                                 :class=" messaggio.status == 'sent' ? 'disp_inviato' : 'disp_ricevuto' ">
@@ -125,10 +126,12 @@
                             </div>
                         </div>
 
+                        <!-- Invio messaggio -->
                         <div class=" col-12 cont_invio">
                             <i class="far fa-smile"></i>
 
-                            <input type="text" placeholder="Scrivi un messaggio">
+                            <input type="text" placeholder="Scrivi un messaggio" v-model="messaggioNuovo"
+                                @keyup.enter="nuovoMessaggio">
 
                             <i class="fas fa-microphone"></i>
                         </div>
